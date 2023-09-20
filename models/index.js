@@ -1,13 +1,33 @@
 const User = require('./User');
-const Project = require('./Project');
+const Template = require('./Template');
+const Workouts = require('./Workouts');
+const Entries = require('./Entries');
 
-User.hasMany(Project, {
+User.hasMany(Template, {
   foreignKey: 'user_id',
-  onDelete: 'CASCADE'
+  onDelete: 'CASCADE',
 });
 
-Project.belongsTo(User, {
-  foreignKey: 'user_id'
+Template.hasMany(Workouts, {
+  foreignKey: 'template_id',
+  onDelete: 'CASCADE',
 });
 
-module.exports = { User, Project };
+Workouts.hasMany(Entries, {
+  foreignKey: 'workout_id',
+  onDelete: 'CASCADE',
+});
+
+Template.belongsTo(User, {
+  foreignKey: 'user_id',
+});
+
+Workouts.belongsTo(Template, {
+  foreignKey: 'template_id',
+});
+
+Entries.belongsTo(Workouts, {
+  foreignKey: 'workout_id',
+});
+
+module.exports = { User, Template, Workouts, Entries };
