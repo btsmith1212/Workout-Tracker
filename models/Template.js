@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Project extends Model {}
+class Template extends Model {}
 
-Project.init(
+Template.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -12,19 +12,7 @@ Project.init(
       autoIncrement: true,
     },
     name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    description: {
-      type: DataTypes.STRING,
-    },
-    date_created: {
-      type: DataTypes.DATE,
-      allowNull: false,
-      defaultValue: DataTypes.NOW,
-    },
-    needed_funding: {
-      type: DataTypes.FLOAT,
+      type: DataTypes.STRING, // name of workout (ie "Chest Day")
       allowNull: false,
     },
     user_id: {
@@ -40,8 +28,8 @@ Project.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'project',
+    modelName: 'template',
   }
 );
 
-module.exports = Project;
+module.exports = Template;
