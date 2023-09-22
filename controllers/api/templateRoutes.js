@@ -17,7 +17,6 @@ router.post('/', withAuth, async (req, res) => {
 });
 
 // UPDATE TEMPLATE
-
 router.put('/:id', withAuth, async (req, res) => {
   try {
     const templateData = await Template.update({

@@ -15,7 +15,6 @@ router.post('/', withAuth, async (req, res) => {
   }
 });
 
-
 router.put('/:id', withAuth, async (req, res) => {
   try {
     const workoutsData = await Workouts.update({
