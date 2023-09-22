@@ -1,43 +1,54 @@
 const router = require('express').Router();
-const { Project } = require('../../models');
+const { Template } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 // CREATE NEW TEMPLATE
 router.post('/', withAuth, async (req, res) => {
   try {
-    const newProject = await Project.create({
+    const newTemplate = await Template.create({
       ...req.body,
       user_id: req.session.user_id,
     });
 
-    res.status(200).json(newProject);
+    res.status(200).json(newTemplate);
   } catch (err) {
     res.status(400).json(err);
   }
 });
 
 // UPDATE TEMPLATE
+
 router.put('/:id', withAuth, async (req, res) => {
   try {
-  } catch (error) {}
-});
-
-// DELETE TEMPLATE
-router.delete('/:id', withAuth, async (req, res) => {
-  try {
-    const projectData = await Project.destroy({
+    const templateData = await Template.update({
       where: {
         id: req.params.id,
         user_id: req.session.user_id,
       },
     });
 
-    if (!projectData) {
-      res.status(404).json({ message: 'No project found with this id!' });
+    res.status(200).json(templateData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+// DELETE TEMPLATE
+router.delete('/:id', withAuth, async (req, res) => {
+  try {
+    const templateData = await Template.destroy({
+      where: {
+        id: req.params.id,
+        user_id: req.session.user_id,
+      },
+    });
+
+    if (!templateData) {
+      res.status(404).json({ message: 'No template found with this id!' });
       return;
     }
 
-    res.status(200).json(projectData);
+    res.status(200).json(templateData);
   } catch (err) {
     res.status(500).json(err);
   }

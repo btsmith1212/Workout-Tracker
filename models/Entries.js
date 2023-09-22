@@ -15,10 +15,6 @@ Entries.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    date: {
-      type: DataTypes.DATEONLY,
-      allowNull: false,
-    },
     actualSets: {
       type: DataTypes.INTEGER,
       allowNull: true,
