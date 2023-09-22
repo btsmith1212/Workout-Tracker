@@ -4,19 +4,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fund My Project!</title>
+  <title>Workout Tracker</title>
   <link rel="stylesheet" href="/css/jass.css">
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 </head>
 
 <body>
-  <div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
-      <h1>
-        <span role="img" aria-label="money">💸</span>
-        <a href="/">Fund My Project!</a>
-      </h1>
-      <nav>
+  
+      <nav class="navbar has-shadow is-success">
+        <div class="navbar-brand">
+          <a class="navbar-item">
+            <img src="../../assets/elephantproject2.png" alt="elephant working out logo" style="max-height: 90px" class="py-1 px-1">
+          </a>
+          <a class="navbar-burger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+        </div>
+
+        <div class="navbar-menu" id="nav-links">
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
         <a href="/profile">profile</a> |
@@ -24,11 +32,14 @@
         {{else}}
         <a href="/login">login</a>
         {{/if}}
+        </div>
       </nav>
     </header>
     <main class="container container-fluid mt-5">
       <!-- Render the sub layout -->
+      
       {{{ body }}}
+      
     </main>
     <footer>
       
