@@ -15,8 +15,10 @@
       <nav class="navbar has-shadow is-success">
         <div class="navbar-brand">
           <a class="navbar-item">
+            <div class="is-size-3-mobile is-size-1-desktop"> Workout Tracker</div>
             <img src="../../assets/elephantproject2.png" alt="elephant working out logo" style="max-height: 90px" class="py-1 px-1">
           </a>
+          
           <a class="navbar-burger">
             <span></span>
             <span></span>
@@ -26,13 +28,15 @@
 
         <div class="navbar-menu" id="nav-links">
         <!-- Conditionally render login or logout links -->
-        {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}}
-        </div>
+          <div class="navbar-end">
+            {{#if logged_in}}
+            <a href="/profile">Profile</a> |
+            <button class="no-button" id="logout">Logout</button>
+            {{else}}
+            <a href="/login">Login</a>
+            {{/if}}
+          </div>
+      </div>
       </nav>
     </header>
     <main class="container container-fluid mt-5">
