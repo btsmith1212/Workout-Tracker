@@ -15,11 +15,11 @@ Workouts.init(
       type: DataTypes.STRING, // name of workout (ie "Bicep Curls")
       allowNull: false,
     },
-    workoutType: {
+    category: {
       type: DataTypes.STRING, // cardio, strength, etc
       allowNull: false,
     },
-    measurementType: {
+    intensity: {
       type: DataTypes.INTEGER, // length,distance, reps, etc
       allowNull: false,
     },

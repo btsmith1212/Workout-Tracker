@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { Entries, Workouts, User, Template } = require('../models');
 const withAuth = require('../utils/auth');
 
+// Get all templates for homepage
 router.get('/', async (req, res) => {
   try {
     const templateData = await Template.findAll({
@@ -14,7 +15,9 @@ router.get('/', async (req, res) => {
     });
 
     // Serialize data so the template can read it
-    const template = templateData.map(project => project.get({ plain: true }));
+    const template = templateData.map(template =>
+      template.get({ plain: true })
+    );
 
     // Pass serialized data and session flag into template
     res.render('homepage', {
@@ -26,6 +29,7 @@ router.get('/', async (req, res) => {
   }
 });
 
+// Get Template Information
 router.get('/template/:id', async (req, res) => {
   try {
     const templateData = await Template.findByPk(req.params.id, {
@@ -48,7 +52,30 @@ router.get('/template/:id', async (req, res) => {
   }
 });
 
-// Use withAuth middleware to prevent access to route
+// Get single entry information
+router.get('/entries/:id', async (req, res) => {
+  try {
+    const entriesData = await Entries.findByPk(req.params.id, {
+      include: [
+        {
+          model: Workouts,
+          attributes: ['name'],
+        },
+      ],
+    });
+
+    const entries = entriesData.get({ plain: true });
+
+    res.render('entry', {
+      ...entries,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+// Login to profile if authenticated
 router.get('/profile', withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
