@@ -29,6 +29,40 @@ router.get('/', async (req, res) => {
   }
 });
 
+router.get('/entry', async (req, res) => {
+  try {
+    const entriesData = await Entries.findAll({
+      include: [
+        {
+          model: Workouts,
+          attributes: ['name'],
+        },
+      ],
+    });
+
+    // Serialize data so the template can read it
+    const entries = entriesData.map(entries => entries.get({ plain: true }));
+
+    // Pass serialized data and session flag into template
+    res.render('entry', {
+      entries,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+// Get signup page
+router.get('/signup', (req, res) => {
+  if (req.session.logged_in) {
+    res.redirect('/profile');
+    return;
+  }
+
+  res.render('signup');
+});
+
 // Get Template Information
 router.get('/template/:id', async (req, res) => {
   try {

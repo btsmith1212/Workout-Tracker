@@ -10,16 +10,16 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 </head>
 
-<body>
+<body class="has-background-dark">
   
       <nav class="navbar has-shadow is-success">
         <div class="navbar-brand">
           <a class="navbar-item">
-            <div class="is-size-3-mobile is-size-1-desktop"> Workout Tracker</div>
-            <img src="../../assets/elephantproject2.png" alt="elephant working out logo" style="max-height: 90px" class="py-1 px-1">
+            <div class="is-size-2-mobile is-size-1-desktop"> Workout Tracker</div>
+            <img src="../assets/elephantproject2.png" alt="elephant working out logo" style="max-height: 90px" class="py-1 px-1">
           </a>
           
-          <a class="navbar-burger">
+          <a class="navbar-burger" id="burger">
             <span></span>
             <span></span>
             <span></span>
@@ -52,7 +52,7 @@
 
   <!-- Render script for logged in users only -->
   {{#if logged_in}}
-  <script src="/js/logout.js"></script>
+  <script src="./js/logout.js"></script>
   {{/if}}
 </body>
 
