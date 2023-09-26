@@ -11,23 +11,11 @@ Entries.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    type: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    actualSets: {
+    sets: {
       type: DataTypes.INTEGER,
       allowNull: true,
     },
-    actualReps: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
-    },
-    actualDistance: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
-    },
-    actualLength: {
+    reps: {
       type: DataTypes.INTEGER,
       allowNull: true,
     },
