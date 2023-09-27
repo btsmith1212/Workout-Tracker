@@ -1,11 +1,3 @@
-// navbar stuff
-const burgerIcon = document.querySelector('#burger');
-const burgerMenu = document.querySelector('#nav-links');
-
-burgerIcon.addEventListener('click', () => {
-  burgerMenu.classList.toggle('is-active');
-});
-
 const loginFormHandler = async event => {
   event.preventDefault();
 
