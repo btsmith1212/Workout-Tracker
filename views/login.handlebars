@@ -1,38 +1,19 @@
-<div class='login-form'>
-  <div class='field'>
-    <p class='control'>
-      <input
-        class='input is-rounded has-background-is-success-light'
-        type='email'
-        id='email-login'
-        placeholder='Email'
-      />
-    </p>
+<div class='row'>
+  <div class='col-md-6'>
+    <form class='form login-form'>
+      <div class='form-group'>
+        <input class='form-input' type='text' id='email-login' placeholder='Email'/>
+      </div>
+      <div class='form-group'>
+        <input class='form-input' type='password' id='password-login' placeholder='Password'/>
+      </div>
+      <div class="form-group">
+        <button class="button login-form is-success" type="submit">Login</button>
+        <a href='/signup'>
+          <button class="button is-success" type="button">Go to Signup</button>
+        </a>
+      </div>
+    </form>
   </div>
-  <div class='field'>
-    <p class='control'>
-      <input
-        class='input is-rounded has-background-is-success-light'
-        type='password-login'
-        id='password'
-        placeholder='Password'
-      />
-    </p>
-  </div>
-  <div class='field'>
-    <p class='control'>
-      <button class='button is-rounded is-success'>
-        Login
-      </button>
-    </p>
-  </div>
-  <div class='field'>
-    <p class='control'>
-      <button class='button is-rounded is-success'>
-        Sign Up
-      </button>
-    </p>
-  </div>
-</div>
-
+<div>
 <script src='./js/login.js'></script>

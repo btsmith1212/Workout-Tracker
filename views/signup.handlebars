@@ -1,31 +1,23 @@
-<div class='signup-form'>
-  <div class='field'>
-    <p class='control'>
-      <input class='input' type='text' id='name-signup' placeholder='Name' />
-    </p>
-  </div>
-  <div class='field'>
-    <p class='control'>
-      <input class='input' type='email' id='email-signup' placeholder='Email' />
-    </p>
-  </div>
-  <div class='field'>
-    <p class='control'>
-      <input
-        class='input'
-        type='password'
-        id='password-signup'
-        placeholder='Password'
-      />
-    </p>
-  </div>
-  <div class='field'>
-    <p class='control'>
-      <button class='button is-success'>
-        Sign Up
-      </button>
-    </p>
+  <div class="col-md-6">
+    <form class="form signup-form">
+      <div class="form-group">
+        <input class="form-input" type="text" id="name-signup" placeholder='Name'/>
+      </div>
+      <div class="form-group">
+        <input class="form-input" type="text" id="email-signup" placeholder='Email'/>
+      </div>
+      <div class="form-group">
+        <input class="form-input" type="password" id="password-signup" placeholder='Password'/>
+      </div>
+      <div class="form-group">
+        <button class="button signup-form is-success" type="submit">Signup</button>
+        <a href='/login'>
+          <button class="button is-success" type="button">Go to Login</button>
+        </a>
+      </div>
+    </form>
   </div>
 </div>
 
-<script src='./js/signup.js'></script>
+<script src="./js/signup.js"></script>
+
