@@ -15,6 +15,17 @@ Template.init(
       type: DataTypes.STRING, // name of workout (ie "Chest Day")
       allowNull: false,
     },
+    day_of_week: {
+      type: DataTypes.STRING, // day of week (ie "Monday")
+      allowNull: false,
+    },
+    workout_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'workout',
+        key: 'id',
+      },
+    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {

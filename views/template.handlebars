@@ -1,10 +1,40 @@
-<div class=" has-background-dark text-center">
-  <h2>{{name}}</h2>
-  <p>{{{get_emoji}}}</p>
-  <p>{{description}}</p>
-  <p> You created this on {{format_date date_created}}</p>
-  <p>
-    <button class="btn btn-primary"></button>
-  </p>
-</div>
+<form class='template-form'>
+  {{! Template Name }}
+  <div class='field'>
+    <p class='control'>
+      <input
+        class='input is-rounded has-background-is-success-light'
+        type='text'
+        id='template-name'
+        placeholder='Template Name'
+      />
+    </p>
+  </div>
+  {{! Multi-Select }}
+  <div class='select is-multiple' id='template-workouts'>
+    <select multiple size='4'>
+      <option value='{{workouts.name}}'>{{workouts.name}}</option>
+      <option value='Bolivia'>Bolivia</option>
+      <option value='Brazil'>Brazil</option>
+      <option value='Chile'>Chile</option>
+      <option value='Colombia'>Colombia</option>
+      <option value='Ecuador'>Ecuador</option>
+      <option value='Guyana'>Guyana</option>
+      <option value='Paraguay'>Paraguay</option>
+      <option value='Peru'>Peru</option>
+      <option value='Suriname'>Suriname</option>
+      <option value='Uruguay'>Uruguay</option>
+      <option value='Venezuela'>Venezuela</option>
+    </select>
+  </div>
+  {{! Submit Button }}
+  <div class='field'>
+    <p class='control'>
+      <button class='button is-rounded is-success' id='login' type='submit'>
+        Submit
+      </button>
+    </p>
+  </div>
+</form>
 
+<script src='./js/template.js'></script>
