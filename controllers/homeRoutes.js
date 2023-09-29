@@ -3,7 +3,7 @@ const { Entries, Workouts, User, Template } = require('../models');
 const withAuth = require('../utils/auth');
 
 // Get all templates for homepage
-router.get('/', async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
   try {
     const templateData = await Template.findAll({
       include: [
@@ -15,13 +15,14 @@ router.get('/', async (req, res) => {
     });
 
     // Serialize data so the template can read it
-    const template = templateData.map(template =>
+    const templates = templateData.map(template =>
       template.get({ plain: true })
     );
 
-    // Pass serialized data and session flag into template
+    console.log(templates);
+    // Pass serialized data and session flag into templates
     res.render('homepage', {
-      template,
+      templates,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
@@ -29,7 +30,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/entry', async (req, res) => {
+router.get('/entry', withAuth, async (req, res) => {
   try {
     const entriesData = await Entries.findAll({
       include: [
@@ -64,32 +65,40 @@ router.get('/signup', (req, res) => {
 });
 
 // Get all templates for homepage
-router.get('/template', async (req, res) => {
+router.get('/template', withAuth, async (req, res) => {
   try {
     const workoutData = await Workouts.findAll({});
     const workouts = workoutData.map(workouts => workouts.get({ plain: true }));
-    const arms = workouts.filter(workouts => workouts.category === 'Arms');
-    const back = workouts.filter(workouts => workouts.category === 'Back');
-    const chest = workouts.filter(workouts => workouts.category === 'Chest');
-    const core = workouts.filter(
+    const armWorkouts = workouts.filter(
+      workouts => workouts.category === 'Arms'
+    );
+    const backWorkouts = workouts.filter(
+      workouts => workouts.category === 'Back'
+    );
+    const chestWorkouts = workouts.filter(
+      workouts => workouts.category === 'Chest'
+    );
+    const coreWorkouts = workouts.filter(
       workouts => workouts.category === 'Core and Abs'
     );
-    const dynamic = workouts.filter(
+    const dynamicWorkouts = workouts.filter(
       workouts => workouts.category === 'Dynamic Lifts'
     );
-    const legs = workouts.filter(workouts => workouts.category === 'Legs');
-    const shoulders = workouts.filter(
+    const legWorkouts = workouts.filter(
+      workouts => workouts.category === 'Legs'
+    );
+    const shoulderWorkouts = workouts.filter(
       workouts => workouts.category === 'Shoulders'
     );
 
     res.render('template', {
-      arms,
-      back,
-      chest,
-      core,
-      dynamic,
-      legs,
-      shoulders,
+      armWorkouts,
+      backWorkouts,
+      chestWorkouts,
+      coreWorkouts,
+      dynamicWorkouts,
+      legWorkouts,
+      shoulderWorkouts,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
@@ -138,26 +147,6 @@ router.get('/entries/:id', async (req, res) => {
     res.render('entry', {
       ...entries,
       logged_in: req.session.logged_in,
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
-// Show template page if authenticated
-router.get('/template', withAuth, async (req, res) => {
-  try {
-    // Find the logged in user based on the session ID
-    const userData = await User.findByPk(req.session.user_id, {
-      attributes: { exclude: ['password'] },
-      include: [{ model: Template }],
-    });
-
-    const user = userData.get({ plain: true });
-
-    res.render('template', {
-      ...user,
-      logged_in: true,
     });
   } catch (err) {
     res.status(500).json(err);
