@@ -7,3 +7,5 @@ burgerIcon.addEventListener('click', () => {
 });
 
 // activates burger items
+
+// source: https://www.youtube.com/watch?v=qvn2SxGvyPs&list=PL4cUxeGkcC9iXItWKbaQxcyDT1u6E7a8a&index=5

@@ -68,10 +68,28 @@ router.get('/template', async (req, res) => {
   try {
     const workoutData = await Workouts.findAll({});
     const workouts = workoutData.map(workouts => workouts.get({ plain: true }));
+    const arms = workouts.filter(workouts => workouts.category === 'Arms');
+    const back = workouts.filter(workouts => workouts.category === 'Back');
+    const chest = workouts.filter(workouts => workouts.category === 'Chest');
+    const core = workouts.filter(
+      workouts => workouts.category === 'Core and Abs'
+    );
+    const dynamic = workouts.filter(
+      workouts => workouts.category === 'Dynamic Lifts'
+    );
+    const legs = workouts.filter(workouts => workouts.category === 'Legs');
+    const shoulders = workouts.filter(
+      workouts => workouts.category === 'Shoulders'
+    );
 
-    console.log(workouts);
     res.render('template', {
-      workouts,
+      arms,
+      back,
+      chest,
+      core,
+      dynamic,
+      legs,
+      shoulders,
       logged_in: req.session.logged_in,
     });
   } catch (err) {

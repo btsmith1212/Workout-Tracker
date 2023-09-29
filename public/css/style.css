@@ -1,3 +1,4 @@
 .fullpage-bg {
-  height: 100vh;
+  height: 300vh; 
 }
+/* 300 here to adjust for mobile backgrounds - definitely a better way to do this. */
