@@ -71,7 +71,7 @@ router.get('/template', async (req, res) => {
 
     console.log(workouts);
     res.render('template', {
-      ...workouts,
+      workouts,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
