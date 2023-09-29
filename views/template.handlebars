@@ -13,19 +13,19 @@
   {{! Multi-Select }}
   <div class='columns is-multiline is-mobile'>
     <div
-      class='column is-auto select is-multiple column is-mobile'
+      class='column is-auto select is-multiple is-mobile'
       id='template-workouts'
     >
       <label class='has-text-light'>Arms</label>
       <select multiple size='4'>
-        {{#each workouts as |workout|}}
-          <option value='{{workout.id}}'>{{workout.name}}</option>
+        {{#each armWorkouts as |armWorkout|}}
+          <option value='{{armWorkout.id}}'>{{armWorkout.name}}</option>
         {{/each}}
       </select>
       <div class='field'>
         <p class='control'>
           <button
-            class='button is-rounded is-success column'
+            class='button is-rounded is-success mt-5 has-text-centered'
             id='login'
             type='submit'
           >
@@ -35,19 +35,19 @@
       </div>
     </div>
     <div
-      class='column is-auto select is-multiple column is-mobile'
+      class='column is-auto select is-multiple is-mobile'
       id='template-workouts'
     >
       <label class='has-text-light'>Back</label>
       <select multiple size='4'>
-        {{#each workouts as |workout|}}
-          <option value='{{workout.id}}'>{{workout.name}}</option>
+        {{#each backWorkouts as |backWorkout|}}
+          <option value='{{backWorkout.id}}'>{{backWorkout.name}}</option>
         {{/each}}
       </select>
       <div class='field'>
         <p class='control'>
           <button
-            class='button is-rounded is-success column'
+            class='button is-rounded is-success mt-5 has-text-centered'
             id='login'
             type='submit'
           >
@@ -62,14 +62,14 @@
     >
       <label class='has-text-light'>Chest</label>
       <select multiple size='4'>
-        {{#each workouts as |workout|}}
-          <option value='{{workout.id}}'>{{workout.name}}</option>
+        {{#each chestWorkouts as |chestWorkout|}}
+          <option value='{{chestWorkout.id}}'>{{chestWorkout.name}}</option>
         {{/each}}
       </select>
       <div class='field'>
         <p class='control'>
           <button
-            class='button is-rounded is-success column'
+            class='button is-rounded is-success mt-5 has-text-centered'
             id='login'
             type='submit'
           >
@@ -84,14 +84,14 @@
     >
       <label class='has-text-light'>Core and Abs</label>
       <select multiple size='4'>
-        {{#each workouts as |workout|}}
-          <option value='{{workout.id}}'>{{workout.name}}</option>
+        {{#each coreWorkouts as |coreWorkout|}}
+          <option value='{{coreWorkout.id}}'>{{coreWorkout.name}}</option>
         {{/each}}
       </select>
       <div class='field'>
         <p class='control'>
           <button
-            class='button is-rounded is-success column'
+            class='button is-rounded is-success mt-5 has-text-centered'
             id='login'
             type='submit'
           >
@@ -106,14 +106,14 @@
     >
       <label class='has-text-light'>Dynamic Lifts</label>
       <select multiple size='4'>
-        {{#each workouts as |workout|}}
-          <option value='{{workout.id}}'>{{workout.name}}</option>
+        {{#each dynamicWorkouts as |dynamicWorkout|}}
+          <option value='{{dynamicWorkout.id}}'>{{dynamicWorkout.name}}</option>
         {{/each}}
       </select>
       <div class='field'>
         <p class='control'>
           <button
-            class='button is-rounded is-success column'
+            class='button is-rounded is-success mt-5 has-text-centered'
             id='login'
             type='submit'
           >
@@ -128,14 +128,14 @@
     >
       <label class='has-text-light'>Legs</label>
       <select multiple size='4'>
-        {{#each workouts as |workout|}}
-          <option value='{{workout.id}}'>{{workout.name}}</option>
+        {{#each legWorkouts as |legWorkout|}}
+          <option value='{{legWorkout.id}}'>{{legWorkout.name}}</option>
         {{/each}}
       </select>
       <div class='field'>
         <p class='control'>
           <button
-            class='button is-rounded is-success column'
+            class='button is-rounded is-success mt-5 has-text-centered'
             id='login'
             type='submit'
           >
@@ -150,14 +150,16 @@
     >
       <label class='has-text-light'>Shoulders</label>
       <select multiple size='4'>
-        {{#each workouts as |workout|}}
-          <option value='{{workout.id}}'>{{workout.name}}</option>
+        {{#each shoulderWorkouts as |shoulderWorkout|}}
+          <option
+            value='{{shoulderWorkout.id}}'
+          >{{shoulderWorkout.name}}</option>
         {{/each}}
       </select>
       <div class='field'>
         <p class='control'>
           <button
-            class='button is-rounded is-success column'
+            class='button is-rounded is-success mt-5 has-text-centered'
             id='login'
             type='submit'
           >
@@ -167,8 +169,6 @@
       </div>
     </div>
   </div>
-  {{! Submit Button }}
-
 </form>
 
 <script src='./js/template.js'></script>
