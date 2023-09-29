@@ -30,6 +30,7 @@
         <div class="navbar-menu" id="nav-links">
         <!-- Conditionally render login or logout links -->
           <div class="navbar-end">
+            <a class="navbar-item" href="/template">Create Template</a> 
             {{#if logged_in}}
             <a class="navbar-item" href="/template">Create New Template</a> |
             <button class="no-button" id="logout">Logout</button>
@@ -57,5 +58,9 @@
   <script src="./js/logout.js"></script>
   {{/if}}
 </body>
+
 <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.js"></script>
+<script src='./js/main.js'></script>
 </html>
+
+{{!-- https://www.youtube.com/watch?v=qvn2SxGvyPs&list=PL4cUxeGkcC9iXItWKbaQxcyDT1u6E7a8a&index=5 --}}
