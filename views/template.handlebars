@@ -11,30 +11,164 @@
     </p>
   </div>
   {{! Multi-Select }}
-  <div class='select is-multiple' id='template-workouts'>
-    <select multiple size='4'>
-      <option value='{{workouts.name}}'>{{workouts.name}}</option>
-      <option value='Bolivia'>Bolivia</option>
-      <option value='Brazil'>Brazil</option>
-      <option value='Chile'>Chile</option>
-      <option value='Colombia'>Colombia</option>
-      <option value='Ecuador'>Ecuador</option>
-      <option value='Guyana'>Guyana</option>
-      <option value='Paraguay'>Paraguay</option>
-      <option value='Peru'>Peru</option>
-      <option value='Suriname'>Suriname</option>
-      <option value='Uruguay'>Uruguay</option>
-      <option value='Venezuela'>Venezuela</option>
-    </select>
+  <div class='columns is-multiline is-mobile'>
+    <div
+      class='column is-auto select is-multiple column is-mobile'
+      id='template-workouts'
+    >
+      <label class='has-text-light'>Arms</label>
+      <select multiple size='4'>
+        {{#each workouts as |workout|}}
+          <option value='{{workout.id}}'>{{workout.name}}</option>
+        {{/each}}
+      </select>
+      <div class='field'>
+        <p class='control'>
+          <button
+            class='button is-rounded is-success column'
+            id='login'
+            type='submit'
+          >
+            Add to Workout
+          </button>
+        </p>
+      </div>
+    </div>
+    <div
+      class='column is-auto select is-multiple column is-mobile'
+      id='template-workouts'
+    >
+      <label class='has-text-light'>Back</label>
+      <select multiple size='4'>
+        {{#each workouts as |workout|}}
+          <option value='{{workout.id}}'>{{workout.name}}</option>
+        {{/each}}
+      </select>
+      <div class='field'>
+        <p class='control'>
+          <button
+            class='button is-rounded is-success column'
+            id='login'
+            type='submit'
+          >
+            Add to Workout
+          </button>
+        </p>
+      </div>
+    </div>
+    <div
+      class='column is-auto select is-multiple column is-mobile'
+      id='template-workouts'
+    >
+      <label class='has-text-light'>Chest</label>
+      <select multiple size='4'>
+        {{#each workouts as |workout|}}
+          <option value='{{workout.id}}'>{{workout.name}}</option>
+        {{/each}}
+      </select>
+      <div class='field'>
+        <p class='control'>
+          <button
+            class='button is-rounded is-success column'
+            id='login'
+            type='submit'
+          >
+            Add to Workout
+          </button>
+        </p>
+      </div>
+    </div>
+    <div
+      class='column is-auto select is-multiple column is-mobile'
+      id='template-workouts'
+    >
+      <label class='has-text-light'>Core and Abs</label>
+      <select multiple size='4'>
+        {{#each workouts as |workout|}}
+          <option value='{{workout.id}}'>{{workout.name}}</option>
+        {{/each}}
+      </select>
+      <div class='field'>
+        <p class='control'>
+          <button
+            class='button is-rounded is-success column'
+            id='login'
+            type='submit'
+          >
+            Add to Workout
+          </button>
+        </p>
+      </div>
+    </div>
+    <div
+      class='column is-auto select is-multiple column is-mobile'
+      id='template-workouts'
+    >
+      <label class='has-text-light'>Dynamic Lifts</label>
+      <select multiple size='4'>
+        {{#each workouts as |workout|}}
+          <option value='{{workout.id}}'>{{workout.name}}</option>
+        {{/each}}
+      </select>
+      <div class='field'>
+        <p class='control'>
+          <button
+            class='button is-rounded is-success column'
+            id='login'
+            type='submit'
+          >
+            Add to Workout
+          </button>
+        </p>
+      </div>
+    </div>
+    <div
+      class='column is-auto select is-multiple column is-mobile'
+      id='template-workouts'
+    >
+      <label class='has-text-light'>Legs</label>
+      <select multiple size='4'>
+        {{#each workouts as |workout|}}
+          <option value='{{workout.id}}'>{{workout.name}}</option>
+        {{/each}}
+      </select>
+      <div class='field'>
+        <p class='control'>
+          <button
+            class='button is-rounded is-success column'
+            id='login'
+            type='submit'
+          >
+            Add to Workout
+          </button>
+        </p>
+      </div>
+    </div>
+    <div
+      class='column is-auto select is-multiple column is-mobile'
+      id='template-workouts'
+    >
+      <label class='has-text-light'>Shoulders</label>
+      <select multiple size='4'>
+        {{#each workouts as |workout|}}
+          <option value='{{workout.id}}'>{{workout.name}}</option>
+        {{/each}}
+      </select>
+      <div class='field'>
+        <p class='control'>
+          <button
+            class='button is-rounded is-success column'
+            id='login'
+            type='submit'
+          >
+            Add to Workout
+          </button>
+        </p>
+      </div>
+    </div>
   </div>
   {{! Submit Button }}
-  <div class='field'>
-    <p class='control'>
-      <button class='button is-rounded is-success' id='login' type='submit'>
-        Submit
-      </button>
-    </p>
-  </div>
+
 </form>
 
 <script src='./js/template.js'></script>
