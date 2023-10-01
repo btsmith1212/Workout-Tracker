@@ -4,15 +4,15 @@
     "day_of_week": "Sunday"
   },
   {
-    "name": "Back Day",
+    "name": "Chest Day",
     "day_of_week": "Monday"
   },
   {
-    "name": "Chest Day",
+    "name": "Back Day",
     "day_of_week": "Tuesday"
   },
   {
-    "name": "Core Day",
+    "name": "Legs Day",
     "day_of_week": "Wednesday"
   },
   {
@@ -20,7 +20,7 @@
     "day_of_week": "Thursday"
   },
   {
-    "name": "Legs Day",
+    "name": "Core Day",
     "day_of_week": "Friday"
   },
   {

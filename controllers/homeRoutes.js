@@ -8,60 +8,25 @@ router.get('/', withAuth, async (req, res) => {
     const templateData = await Template.findAll({
       include: [
         {
-          model: Workouts,
-          attributes: ['name'],
+          model: User,
+          attributes: ['id'],
         },
       ],
+      where: {
+        user_id: req.session.user_id,
+      },
     });
-
-    // Serialize data so the template can read it
     const templates = templateData.map(template =>
       template.get({ plain: true })
     );
-
     console.log(templates);
-    // Pass serialized data and session flag into templates
     res.render('homepage', {
       templates,
       logged_in: req.session.logged_in,
     });
-  } catch (err) {
-    res.status(500).json(err);
+  } catch (error) {
+    res.status(500).json(error);
   }
-});
-
-router.get('/entry', withAuth, async (req, res) => {
-  try {
-    const entriesData = await Entries.findAll({
-      include: [
-        {
-          model: Workouts,
-          attributes: ['name'],
-        },
-      ],
-    });
-
-    // Serialize data so the template can read it
-    const entries = entriesData.map(entries => entries.get({ plain: true }));
-
-    // Pass serialized data and session flag into template
-    res.render('entry', {
-      entries,
-      logged_in: req.session.logged_in,
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
-// Get signup page
-router.get('/signup', (req, res) => {
-  // if (req.session.logged_in) {
-  //   res.redirect('/profile');
-  //   return;
-  // }
-
-  res.render('signup');
 });
 
 // Get all templates for homepage
@@ -107,45 +72,22 @@ router.get('/template', withAuth, async (req, res) => {
   }
 });
 
-// Get Template Information
-router.get('/template/:id', async (req, res) => {
+router.get('/entry/:id', withAuth, async (req, res) => {
   try {
-    const templateData = await Template.findByPk(req.params.id, {
-      include: [
-        {
-          model: Workouts,
-          attributes: ['name'],
-        },
-      ],
+    const entryWorkouts = await Workouts.findAll({
+      where: {
+        template_id: req.params.id,
+      },
     });
 
-    const template = templateData.get({ plain: true });
+    const workouts = entryWorkouts.map(workouts =>
+      workouts.get({ plain: true })
+    );
 
-    res.render('template', {
-      ...template,
-      logged_in: req.session.logged_in,
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
-// Get single entry information
-router.get('/entries/:id', async (req, res) => {
-  try {
-    const entriesData = await Entries.findByPk(req.params.id, {
-      include: [
-        {
-          model: Workouts,
-          attributes: ['name'],
-        },
-      ],
-    });
-
-    const entries = entriesData.get({ plain: true });
+    console.log(workouts);
 
     res.render('entry', {
-      ...entries,
+      workouts,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
@@ -153,8 +95,13 @@ router.get('/entries/:id', async (req, res) => {
   }
 });
 
+// Get signup page
+router.get('/signup', (req, res) => {
+  res.render('signup');
+});
+
+// Get login page
 router.get('/login', (req, res) => {
-  // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
     res.redirect('/');
     return;
