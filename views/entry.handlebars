@@ -1,27 +1,10 @@
-<div class='field'>
-  <p class='control'>
-    <input
-      class='input is-rounded has-background-is-success-light'
-      type='text'
-      id='sets'
-      placeholder='Sets'
-    />
-  </p>
-</div>
-<div class='field'>
-  <p class='control'>
-    <input
-      class='input is-rounded has-background-is-success-light'
-      type='text'
-      id='reps'
-      placeholder='Reps'
-    />
-  </p>
-</div>
+{{#each workouts as |workout|}}
+{{> entryDetails}}
+{{/each}}
 <div class='field'>
   <p class='control'>
     <button class='button is-rounded is-success' id='save-to-workout'>
-      Save to Workout
+      Submit
     </button>
   </p>
 </div>

@@ -4,7 +4,7 @@ const Workouts = require('./Workouts');
 const Entries = require('./Entries');
 
 User.hasMany(Template, {
-  foreignKey: 'user_id',
+  foreignKey: 'template_id',
   onDelete: 'CASCADE',
 });
 

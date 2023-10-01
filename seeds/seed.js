@@ -13,16 +13,16 @@ const seedDatabase = async () => {
     returning: true,
   });
 
-  for (const workout of workoutData) {
-    await Workouts.create({
-      ...workout,
+  for (const template of templateData) {
+    await Template.create({
+      ...template,
       user_id: users[Math.floor(Math.random() * users.length)].id,
     });
   }
 
-  for (const template of templateData) {
-    await Template.create({
-      ...template,
+  for (const workout of workoutData) {
+    await Workouts.create({
+      ...workout,
       user_id: users[Math.floor(Math.random() * users.length)].id,
     });
   }

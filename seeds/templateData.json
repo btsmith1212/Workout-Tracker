@@ -1,10 +1,30 @@
 [
   {
-    "name": "Test",
+    "name": "Arms Day",
     "day_of_week": "Sunday"
   },
   {
-    "name": "Test 2",
+    "name": "Chest Day",
     "day_of_week": "Monday"
+  },
+  {
+    "name": "Back Day",
+    "day_of_week": "Tuesday"
+  },
+  {
+    "name": "Legs Day",
+    "day_of_week": "Wednesday"
+  },
+  {
+    "name": "Dynamic Day",
+    "day_of_week": "Thursday"
+  },
+  {
+    "name": "Core Day",
+    "day_of_week": "Friday"
+  },
+  {
+    "name": "Shoulders Day",
+    "day_of_week": "Saturday"
   }
 ]

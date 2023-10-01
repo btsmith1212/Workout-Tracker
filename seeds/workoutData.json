@@ -2,521 +2,625 @@
   {
     "name": "Back Squat",
     "category": "Legs",
-    "intensity": 3
+    "intensity": 3,
+    "template_id": 4
   },
   {
     "name": "Front Barbell Squat",
     "category": "Legs",
-    "intensity": 3
+    "intensity": 3,
+    "template_id": 4
   },
   {
     "name": "Barbell Hack Squat",
     "category": "Legs",
-    "intensity": 3
+    "intensity": 3,
+    "template_id": 4
   },
   {
     "name": "Dumbbell Split Squat",
     "category": "Legs",
-    "intensity": 3
+    "intensity": 3,
+    "template_id": 4
   },
   {
     "name": "Overhead Split Squat",
     "category": "Legs",
-    "intensity": 4
+    "intensity": 4,
+    "template_id": 4
   },
   {
     "name": "Bulgarian Barbell Split Squat",
     "category": "Legs",
-    "intensity": 4
+    "intensity": 4,
+    "template_id": 4
   },
   {
     "name": "Bulgarian Dumbbell Split Squat",
     "category": "Legs",
-    "intensity": 4
+    "intensity": 4,
+    "template_id": 4
   },
   {
     "name": "Barbell Lunge",
     "category": "Legs",
-    "intensity": 3
+    "intensity": 3,
+    "template_id": 4
   },
   {
     "name": "Overhead Barbell Lunge",
     "category": "Legs",
-    "intensity": 4
+    "intensity": 4,
+    "template_id": 4
   },
   {
     "name": "Forward Lunge",
     "category": "Legs",
-    "intensity": 3
+    "intensity": 3,
+    "template_id": 4
   },
   {
     "name": "Lateral Lunge",
     "category": "Legs",
-    "intensity": 3
+    "intensity": 3,
+    "template_id": 4
   },
   {
     "name": "Barbell Step-up",
     "category": "Legs",
-    "intensity": 3
+    "intensity": 3,
+    "template_id": 4
   },
   {
     "name": "45-Degree Leg Press",
     "category": "Legs",
-    "intensity": 1
+    "intensity": 1,
+    "template_id": 4
   },
   {
     "name": "Machine Leg Curl",
     "category": "Legs",
-    "intensity": 1
+    "intensity": 1,
+    "template_id": 4
   },
   {
     "name": "Machine Leg Extension",
     "category": "Legs",
-    "intensity": 1
+    "intensity": 1,
+    "template_id": 4
   },
   {
     "name": "Hip Abductor",
     "category": "Legs",
-    "intensity": 1
+    "intensity": 1,
+    "template_id": 4
   },
   {
     "name": "Hip Adductor",
     "category": "Legs",
-    "intensity": 1
+    "intensity": 1,
+    "template_id": 4
   },
   {
     "name": "Calf Raise",
     "category": "Legs",
-    "intensity": 2
+    "intensity": 2,
+    "template_id": 4
   },
   {
     "name": "Straight Leg Deadlift",
     "category": "Legs",
-    "intensity": 3
+    "intensity": 3,
+    "template_id": 4
   },
   {
     "name": "Barbell Deadlift",
     "category": "Legs",
-    "intensity": 3
+    "intensity": 3,
+    "template_id": 4
   },
   {
     "name": "Romanian Deadlift",
     "category": "Legs",
-    "intensity": 4
+    "intensity": 4,
+    "template_id": 4
   },
   {
     "name": "Assisted Chin-Up",
     "category": "Back",
-    "intensity": 2
+    "intensity": 2,
+    "template_id": 3
   },
   {
     "name": "Lat Pull-Down",
     "category": "Back",
-    "intensity": 2
+    "intensity": 2,
+    "template_id": 3
   },
   {
     "name": "Chin-Up",
     "category": "Back",
-    "intensity": 4
+    "intensity": 4,
+    "template_id": 3
   },
   {
     "name": "Seated Pulley Row",
     "category": "Back",
-    "intensity": 2
+    "intensity": 2,
+    "template_id": 3
   },
   {
     "name": "Standing Pulley Row",
     "category": "Back",
-    "intensity": 4
+    "intensity": 4,
+    "template_id": 3
   },
   {
     "name": "One Arm Row",
     "category": "Back",
-    "intensity": 2
+    "intensity": 2,
+    "template_id": 3
   },
   {
     "name": "Bent-Over Row",
     "category": "Back",
-    "intensity": 3
+    "intensity": 3,
+    "template_id": 3
   },
   {
     "name": "Barbell Pull-Over",
     "category": "Back",
-    "intensity": 3
+    "intensity": 3,
+    "template_id": 3
   },
   {
     "name": "Good Morning Barbell",
     "category": "Back",
-    "intensity": 3
+    "intensity": 3,
+    "template_id": 3
   },
   {
     "name": "Back Extension",
     "category": "Back",
-    "intensity": 2
+    "intensity": 2,
+    "template_id": 3
   },
   {
     "name": "Prone Row",
     "category": "Back",
-    "intensity": 2
+    "intensity": 2,
+    "template_id": 3
   },
   {
     "name": "Straight-Arm Pull-Down",
     "category": "Back",
-    "intensity": 2
+    "intensity": 2,
+    "template_id": 3
   },
   {
     "name": "Barbell Bench Press",
     "category": "Chest",
-    "intensity": 2
+    "intensity": 2,
+    "template_id": 2
   },
   {
     "name": "Dumbbell Bench Press",
     "category": "Chest",
-    "intensity": 2
+    "intensity": 2,
+    "template_id": 2
   },
   {
     "name": "Incline Barbell Bench Press",
     "category": "Chest",
-    "intensity": 2
+    "intensity": 2,
+    "template_id": 2
   },
   {
     "name": "Incline Dumbbell Bench Press",
     "category": "Chest",
-    "intensity": 3
+    "intensity": 3,
+    "template_id": 2
   },
   {
     "name": "Incline Fly",
     "category": "Chest",
-    "intensity": 3
+    "intensity": 3,
+    "template_id": 2
   },
   {
     "name": "Cable Cross-Over",
     "category": "Chest",
-    "intensity": 3
+    "intensity": 3,
+    "template_id": 2
   },
   {
     "name": "Machine Bench Press",
     "category": "Chest",
-    "intensity": 1
+    "intensity": 1,
+    "template_id": 2
   },
   {
     "name": "Machine Fly",
     "category": "Chest",
-    "intensity": 1
+    "intensity": 1,
+    "template_id": 2
   },
   {
     "name": "Press-Up",
     "category": "Chest",
-    "intensity": 2
+    "intensity": 2,
+    "template_id": 2
   },
   {
     "name": "Frame-Supported Press-Up",
     "category": "Chest",
-    "intensity": 3
+    "intensity": 3,
+    "template_id": 2
   },
   {
     "name": "Military Barbell Press",
     "category": "Shoulders",
-    "intensity": 2
+    "intensity": 2,
+    "template_id": 7
   },
   {
     "name": "Dumbbell Shoulder Press",
     "category": "Shoulders",
-    "intensity": 2
+    "intensity": 2,
+    "template_id": 7
   },
   {
     "name": "Upright Row",
     "category": "Shoulders",
-    "intensity": 3
+    "intensity": 3,
+    "template_id": 7
   },
   {
     "name": "Dumbbell Shoulder Shrug",
     "category": "Shoulders",
-    "intensity": 1
+    "intensity": 1,
+    "template_id": 7
   },
   {
     "name": "Shoulder Shrug From Hang",
     "category": "Shoulders",
-    "intensity": 3
+    "intensity": 3,
+    "template_id": 7
   },
   {
     "name": "Front Dumbbell Raise",
     "category": "Shoulders",
-    "intensity": 2
+    "intensity": 2,
+    "template_id": 7
   },
   {
     "name": "Lateral Dumbbell Raise",
     "category": "Shoulders",
-    "intensity": 2
+    "intensity": 2,
+    "template_id": 7
   },
   {
     "name": "Rear Lateral Raise",
     "category": "Shoulders",
-    "intensity": 3
+    "intensity": 3,
+    "template_id": 7
   },
   {
     "name": "Scarecrow Rotation",
     "category": "Shoulders",
-    "intensity": 2
+    "intensity": 2,
+    "template_id": 7
   },
   {
     "name": "External Dumbbell Rotation",
     "category": "Shoulders",
-    "intensity": 2
+    "intensity": 2,
+    "template_id": 7
   },
   {
     "name": "Internal Rotation",
     "category": "Shoulders",
-    "intensity": 2
+    "intensity": 2,
+    "template_id": 7
   },
   {
     "name": "External Rotation",
     "category": "Shoulders",
-    "intensity": 2
+    "intensity": 2,
+    "template_id": 7
   },
   {
     "name": "Bench Dip",
     "category": "Arms",
-    "intensity": 3
+    "intensity": 3,
+    "template_id": 1
   },
   {
     "name": "Bar Dip",
     "category": "Arms",
-    "intensity": 3
+    "intensity": 3,
+    "template_id": 1
   },
   {
     "name": "Dumbbell Triceps Extension",
     "category": "Arms",
-    "intensity": 2
+    "intensity": 2,
+    "template_id": 1
   },
   {
     "name": "Barbell Triceps Extension",
     "category": "Arms",
-    "intensity": 2
+    "intensity": 2,
+    "template_id": 1
   },
   {
     "name": "Prone Triceps Extension",
     "category": "Arms",
-    "intensity": 3
+    "intensity": 3,
+    "template_id": 1
   },
   {
     "name": "Triceps Kickback",
     "category": "Arms",
-    "intensity": 2
+    "intensity": 2,
+    "template_id": 1
   },
   {
     "name": "Close-Grip Bench Press",
     "category": "Arms",
-    "intensity": 3
+    "intensity": 3,
+    "template_id": 1
   },
   {
     "name": "Triceps Push-Down",
     "category": "Arms",
-    "intensity": 1
+    "intensity": 1,
+    "template_id": 1
   },
   {
     "name": "Overhead Triceps Extension",
     "category": "Arms",
-    "intensity": 2
+    "intensity": 2,
+    "template_id": 1
   },
   {
     "name": "Barbell Curl",
     "category": "Arms",
-    "intensity": 1
+    "intensity": 1,
+    "template_id": 1
   },
   {
     "name": "Hammer Dumbbell Curl",
     "category": "Arms",
-    "intensity": 1
+    "intensity": 1,
+    "template_id": 1
   },
   {
     "name": "Incline Dumbell Curl",
     "category": "Arms",
-    "intensity": 1
+    "intensity": 1,
+    "template_id": 1
   },
   {
     "name": "Concentration Curl",
     "category": "Arms",
-    "intensity": 1
+    "intensity": 1,
+    "template_id": 1
   },
   {
     "name": "Preacher Curl",
     "category": "Arms",
-    "intensity": 1
+    "intensity": 1,
+    "template_id": 1
   },
   {
     "name": "Pulley Curl",
     "category": "Arms",
-    "intensity": 1
+    "intensity": 1,
+    "template_id": 1
   },
   {
     "name": "Reverse Barbell Curl",
     "category": "Arms",
-    "intensity": 1
+    "intensity": 1,
+    "template_id": 1
   },
   {
     "name": "Reverse Pulley Curl",
     "category": "Arms",
-    "intensity": 1
+    "intensity": 1,
+    "template_id": 1
   },
   {
     "name": "Wrist Extension",
     "category": "Arms",
-    "intensity": 1
+    "intensity": 1,
+    "template_id": 1
   },
   {
     "name": "Wrist Flexion",
     "category": "Arms",
-    "intensity": 1
+    "intensity": 1,
+    "template_id": 1
   },
   {
     "name": "Abdominal Crunch",
     "category": "Core and Abs",
-    "intensity": 1
+    "intensity": 1,
+    "template_id": 6
   },
   {
     "name": "Sit-Up",
     "category": "Core and Abs",
-    "intensity": 2
+    "intensity": 2,
+    "template_id": 6
   },
   {
     "name": "Reverse Crunch",
     "category": "Core and Abs",
-    "intensity": 3
+    "intensity": 3,
+    "template_id": 6
   },
   {
     "name": "Figure-4 Crunch",
     "category": "Core and Abs",
-    "intensity": 3
+    "intensity": 3,
+    "template_id": 6
   },
   {
     "name": "90-90 Crunch",
     "category": "Core and Abs",
-    "intensity": 2
+    "intensity": 2,
+    "template_id": 6
   },
   {
     "name": "Ball Crunch",
     "category": "Core and Abs",
-    "intensity": 2
+    "intensity": 2,
+    "template_id": 6
   },
   {
     "name": "Ball Twist",
     "category": "Core and Abs",
-    "intensity": 2
+    "intensity": 2,
+    "template_id": 6
   },
   {
     "name": "Ball Press-Up",
     "category": "Core and Abs",
-    "intensity": 3
+    "intensity": 3,
+    "template_id": 6
   },
   {
     "name": "Ball Jack Knife",
     "category": "Core and Abs",
-    "intensity": 4
+    "intensity": 4,
+    "template_id": 6
   },
   {
     "name": "Ball Back Extension",
     "category": "Core and Abs",
-    "intensity": 2
+    "intensity": 2,
+    "template_id": 6
   },
   {
     "name": "Side Bend",
     "category": "Core and Abs",
-    "intensity": 2
+    "intensity": 2,
+    "template_id": 6
   },
   {
     "name": "Roman Chair Side Bend",
     "category": "Core and Abs",
-    "intensity": 3
+    "intensity": 3,
+    "template_id": 6
   },
   {
     "name": "Prone Plank",
     "category": "Core and Abs",
-    "intensity": 3
+    "intensity": 3,
+    "template_id": 6
   },
   {
     "name": "Side Plank",
     "category": "Core and Abs",
-    "intensity": 3
+    "intensity": 3,
+    "template_id": 6
   },
   {
     "name": "V-Leg Raise",
     "category": "Core and Abs",
-    "intensity": 2
+    "intensity": 2,
+    "template_id": 6
   },
   {
     "name": "Suitcase Deadlift",
     "category": "Core and Abs",
-    "intensity": 2
+    "intensity": 2,
+    "template_id": 6
   },
   {
     "name": "Woodchop",
     "category": "Core and Abs",
-    "intensity": 3
+    "intensity": 3,
+    "template_id": 6
   },
   {
     "name": "Power Clean",
     "category": "Dynamic Lifts",
-    "intensity": 5
+    "intensity": 5,
+    "template_id": 5
   },
   {
     "name": "Power Snatch",
     "category": "Dynamic Lifts",
-    "intensity": 5
+    "intensity": 5,
+    "template_id": 5
   },
   {
     "name": "Power Clean from Hang",
     "category": "Dynamic Lifts",
-    "intensity": 5
+    "intensity": 5,
+    "template_id": 5
   },
   {
     "name": "Power Snatch from Hang",
     "category": "Dynamic Lifts",
-    "intensity": 5
+    "intensity": 5,
+    "template_id": 5
   },
   {
     "name": "Squat Clean",
     "category": "Dynamic Lifts",
-    "intensity": 5
+    "intensity": 5,
+    "template_id": 5
   },
   {
     "name": "Heavy Front Squat",
     "category": "Dynamic Lifts",
-    "intensity": 5
+    "intensity": 5,
+    "template_id": 5
   },
   {
     "name": "Overhead Squat",
     "category": "Dynamic Lifts",
-    "intensity": 5
+    "intensity": 5,
+    "template_id": 5
   },
   {
     "name": "Jerk Balance",
     "category": "Dynamic Lifts",
-    "intensity": 5
+    "intensity": 5,
+    "template_id": 5
   },
   {
     "name": "Snatch Balance",
     "category": "Dynamic Lifts",
-    "intensity": 5
+    "intensity": 5,
+    "template_id": 5
   },
   {
     "name": "Split Snatch",
     "category": "Dynamic Lifts",
-    "intensity": 5
+    "intensity": 5,
+    "template_id": 5
   },
   {
     "name": "Push Press",
     "category": "Dynamic Lifts",
-    "intensity": 5
+    "intensity": 5,
+    "template_id": 5
   },
   {
     "name": "Kettleball High-Pull",
     "category": "Dynamic Lifts",
-    "intensity": 3
+    "intensity": 3,
+    "template_id": 5
   },
   {
     "name": "Barbell Jump Squat",
     "category": "Dynamic Lifts",
-    "intensity": 3
+    "intensity": 3,
+    "template_id": 5
   }
 ]
