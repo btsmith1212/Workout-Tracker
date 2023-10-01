@@ -1,4 +1,13 @@
 .fullpage-bg {
-  height: 300vh; 
+  height: 300vh;
+}
+
+.small-card {
+  height: 250px;
 }
 /* 300 here to adjust for mobile backgrounds - definitely a better way to do this. */
+
+.workout-select {
+  height: 300px;
+  width: 300px;
+}
