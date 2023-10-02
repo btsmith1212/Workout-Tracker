@@ -23,3 +23,7 @@ Nick Hanson, Alex Blaylock, and Blake Smith
 ## License
 
 MIT License. Please refer to the LICENSE in the repo.
+
+## Code Sources
+
+https://lifter-6a5bb4529987.herokuapp.com/
