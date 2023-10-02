@@ -13,8 +13,8 @@ Template.hasMany(Workouts, {
   onDelete: 'CASCADE',
 });
 
-Workouts.hasMany(Entries, {
-  foreignKey: 'workout_id',
+Template.hasMany(Entries, {
+  foreignKey: 'template_id',
   onDelete: 'CASCADE',
 });
 
@@ -22,7 +22,7 @@ Template.belongsTo(User, {
   foreignKey: 'user_id',
 });
 
-Workouts.belongsTo(Template, {
+Entries.belongsTo(Template, {
   foreignKey: 'template_id',
 });
 
