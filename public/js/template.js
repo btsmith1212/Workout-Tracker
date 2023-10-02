@@ -1,23 +1,58 @@
 const templateFormHandler = async event => {
   event.preventDefault();
-
   const day_of_week = document.querySelector('#workout-day').value.trim();
   const category = document.querySelector('#workout-category').value.trim();
-  const workout_name = document.querySelector('#workout-name').value.trim();
-  const sets = document.querySelector('#workout-sets').value.trim();
-  const reps = document.querySelector('#workout-reps').value.trim();
-  const workout_notes = document.querySelector('#workout-notes').value.trim();
+  let workout_name1,
+    sets1,
+    reps1,
+    workout_name2,
+    sets2,
+    reps2,
+    workout_name3,
+    sets3,
+    reps3,
+    workout_name4,
+    sets4,
+    reps4,
+    workout_name5,
+    sets5,
+    reps5;
+
+  for (let i = 1; i < 6; i++) {
+    if (document.querySelector(`#workout-name${i}`).value.trim() !== '') {
+      eval(
+        `workout_name${i} = document.querySelector('#workout-name${i}').value.trim();`
+      );
+      eval(
+        `sets${i} = document.querySelector('#workout-sets${i}').value.trim();`
+      );
+      eval(
+        `reps${i} = document.querySelector('#workout-reps${i}').value.trim();`
+      );
+    }
+  }
 
   const data = {
     day_of_week,
     category,
-    workout_name,
-    sets,
-    reps,
-    workout_notes,
+    workout_name1,
+    sets1,
+    reps1,
+    workout_name2,
+    sets2,
+    reps2,
+    workout_name3,
+    sets3,
+    reps3,
+    workout_name4,
+    sets4,
+    reps4,
+    workout_name5,
+    sets5,
+    reps5,
   };
 
-  if (workout_name && category && day_of_week && sets && reps) {
+  if (category && day_of_week) {
     const response = await fetch('/api/templates', {
       method: 'POST',
       body: JSON.stringify(data),
@@ -25,7 +60,8 @@ const templateFormHandler = async event => {
     });
 
     if (response.ok) {
-      document.location.replace('/');
+      alert('Workout added to template.');
+      document.location.reload();
     } else {
       alert(response.statusText);
     }
