@@ -1,6 +1,7 @@
 <form class='template-form'>
-  <div>
-    <label>Day</label>
+  <div class='mx-6'>
+    {{! day select }}
+    <label>Day:</label>
     <select id='workout-day'>
       <option>Sunday</option>
       <option>Monday</option>
@@ -10,9 +11,8 @@
       <option>Friday</option>
       <option>Saturday</option>
     </select>
-  </div>
-  <div>
-    <label>Category</label>
+    {{! category select }}
+    <label>Category:</label>
     <select id='workout-category'>
       <option>Arms</option>
       <option>Chest</option>
@@ -23,21 +23,23 @@
       <option>Core and Abs</option>
     </select>
   </div>
-  <div>
-    <input
-      class='input'
-      id='workout-name'
-      type='text'
-      placeholder='Workout Name'
-    />
+  <div class='columns mt-1'>
+    <div class='column is-one-third mx-6'>
+      <input
+        class='input'
+        id='workout-name'
+        type='text'
+        placeholder='Workout'
+      />
+    </div>
+    <div class='column mx-6'>
+      <input class='input' id='workout-sets' type='text' placeholder='Sets' />
+    </div>
+    <div class='column mx-6'>
+      <input class='input' id='workout-reps' type='text' placeholder='Reps' />
+    </div>
   </div>
-  <div>
-    <input class='input' id='workout-sets' type='text' placeholder='Sets' />
-  </div>
-  <div>
-    <input class='input' id='workout-reps' type='text' placeholder='Reps' />
-  </div>
-  <div>
+  <div class='mx-6'>
     <textarea
       class='textarea'
       id='workout-notes'

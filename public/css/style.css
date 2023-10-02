@@ -1,13 +1,23 @@
 .fullpage-bg {
-  height: 300vh;
+  height: 100vh;
+  width: 100%;
 }
 
 .small-card {
   height: 250px;
 }
-/* 300 here to adjust for mobile backgrounds - definitely a better way to do this. */
+
+
+.entry-card {
+  height: 160px;
+  width: 275px;
+}
 
 .workout-select {
   height: 300px;
+  width: 400px;
+}
+
+.template-input-width {
   width: 300px;
 }
