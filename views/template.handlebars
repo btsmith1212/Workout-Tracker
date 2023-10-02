@@ -1,4 +1,4 @@
-<form class='template-form'>
+<form class='template-form mt-4'>
   {{! Template Name }}
   <div class='field'>
     <p class='control'>
@@ -13,8 +13,13 @@
   {{! Multi-Select }}
   <div class='columns is-three-quarters-mobile is-multiline is-mobile'>
     <div class='column select is-multiple has-text-centered'>
+  <div class='columns is-half-desktop is-three-quarters-mobile is-multiline is-mobile'>
+    <div
+      class='column select is-multiple has-text-centered'
+      
+    >
       <label class='has-text-light'>Arms</label>
-      <select class='workout-select' multiple size='4'>
+      <select class='workout-select ml-6' multiple size='4'>
         {{#each armWorkouts as |armWorkout|}}
           <option value='{{armWorkout.id}}'>{{armWorkout.name}}</option>
         {{/each}}
@@ -22,7 +27,7 @@
     </div>
     <div class='column select is-multiple has-text-centered'>
       <label class='has-text-light'>Back</label>
-      <select class='workout-select' multiple size='4'>
+      <select class='workout-select ml-6' multiple size='4'>
         {{#each backWorkouts as |backWorkout|}}
           <option value='{{backWorkout.id}}'>{{backWorkout.name}}</option>
         {{/each}}
@@ -30,7 +35,7 @@
     </div>
     <div class='column select is-multiple column has-text-centered'>
       <label class='has-text-light'>Chest</label>
-      <select class='workout-select' multiple size='4'>
+      <select class='workout-select ml-6' multiple size='4'>
         {{#each chestWorkouts as |chestWorkout|}}
           <option value='{{chestWorkout.id}}'>{{chestWorkout.name}}</option>
         {{/each}}
@@ -38,7 +43,7 @@
     </div>
     <div class='column select is-multiple column has-text-centered'>
       <label class='has-text-light'>Core and Abs</label>
-      <select class='workout-select' multiple size='4'>
+      <select class='workout-select ml-6' multiple size='4'>
         {{#each coreWorkouts as |coreWorkout|}}
           <option value='{{coreWorkout.id}}'>{{coreWorkout.name}}</option>
         {{/each}}
@@ -46,7 +51,7 @@
     </div>
     <div class='column select is-multiple column has-text-centered'>
       <label class='has-text-light'>Dynamic Lifts</label>
-      <select class='workout-select' multiple size='4'>
+      <select class='workout-select ml-6' multiple size='4'>
         {{#each dynamicWorkouts as |dynamicWorkout|}}
           <option value='{{dynamicWorkout.id}}'>{{dynamicWorkout.name}}</option>
         {{/each}}
@@ -54,7 +59,7 @@
     </div>
     <div class='column select is-multiple column has-text-centered'>
       <label class='has-text-light'>Legs</label>
-      <select class='workout-select' multiple size='4'>
+      <select class='workout-select ml-6' multiple size='4'>
         {{#each legWorkouts as |legWorkout|}}
           <option value='{{legWorkout.id}}'>{{legWorkout.name}}</option>
         {{/each}}
@@ -62,7 +67,7 @@
     </div>
     <div class='column select is-multiple column has-text-centered'>
       <label class='has-text-light'>Shoulders</label>
-      <select class='workout-select' multiple size='4'>
+      <select class='workout-select ml-6' multiple size='4'>
         {{#each shoulderWorkouts as |shoulderWorkout|}}
           <option
             value='{{shoulderWorkout.id}}'
@@ -73,38 +78,44 @@
 
     <div class='column select is-multiple column has-text-centered'>
       <label class='has-text-light'>Day</label>
-      <select class='workout-select' multiple size='4'>
-
-        <option>
-          Sunday
-        </option>
-        <option>
-          Monday
-        </option>
-        <option>
-          Tuesday
-        </option>
-        <option>
-          Wednesday
-        </option>
-        <option>
-          Thursday
-        </option>
-        <option>
-          Friday
-        </option>
-        <option>
-          Saturday
-        </option>
+      <select class="workout-select ml-6" multiple size='4'>
+        
+          <option>
+            Sunday
+          </option>
+          <option>
+            Monday
+          </option>
+          <option>
+            Tuesday
+          </option>
+          <option>
+            Wednesday
+          </option>
+          <option>
+            Thursday
+          </option>
+          <option>
+            Friday
+          </option>
+          <option>
+            Saturday
+          </option>
       </select>
+      </div>
+    </div>
     </div>
   </div>
-  {{! button }}
-  <div class='is-flex is-justify-content-center'>
-    <button class='button is-rounded is-success mt-5' id='login' type='submit'>
-      Submit
-    </button>
-  </div>
+{{!-- button --}}
+        <div class="is-flex is-justify-content-center">
+          <button
+            class='button is-rounded is-success mt-5'
+            id='login'
+            type='submit'
+          >
+            Add to Workout
+          </button>
+        </div>
 </form>
 
 <script src='./js/template.js'></script>
