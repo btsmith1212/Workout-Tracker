@@ -26,6 +26,13 @@ Entries.init(
         key: 'id',
       },
     },
+    template_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'template',
+        key: 'id',
+      },
+    },
   },
   {
     sequelize,

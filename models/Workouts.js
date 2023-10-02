@@ -23,13 +23,6 @@ Workouts.init(
       type: DataTypes.INTEGER, // length,distance, reps, etc
       allowNull: false,
     },
-    template_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'template',
-        key: 'id',
-      },
-    },
   },
   {
     sequelize,
