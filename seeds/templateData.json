@@ -1,30 +1,29 @@
 [
   {
-    "name": "Arms Day",
-    "day_of_week": "Sunday"
+    "day_of_week": "Sunday",
+    "category": "Arms",
+    "workout_name": "Bicep Curls",
+    "sets": 3,
+    "reps": 10,
+    "workout_notes": "Did a workout",
+    "user_id": 1
   },
   {
-    "name": "Chest Day",
-    "day_of_week": "Monday"
+    "day_of_week": "Tuesday",
+    "category": "Arms",
+    "workout_name": "Bicep Curls",
+    "sets": 3,
+    "reps": 10,
+    "workout_notes": "Did a workout",
+    "user_id": 1
   },
   {
-    "name": "Back Day",
-    "day_of_week": "Tuesday"
-  },
-  {
-    "name": "Legs Day",
-    "day_of_week": "Wednesday"
-  },
-  {
-    "name": "Dynamic Day",
-    "day_of_week": "Thursday"
-  },
-  {
-    "name": "Core Day",
-    "day_of_week": "Friday"
-  },
-  {
-    "name": "Shoulders Day",
-    "day_of_week": "Saturday"
+    "day_of_week": "Thursday",
+    "category": "Arms",
+    "workout_name": "Bicep Curls",
+    "sets": 3,
+    "reps": 10,
+    "workout_notes": "Did a workout",
+    "user_id": 1
   }
 ]

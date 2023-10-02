@@ -11,20 +11,29 @@ Template.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
-      type: DataTypes.STRING, // name of workout (ie "Chest Day")
-      allowNull: false,
-    },
     day_of_week: {
       type: DataTypes.STRING, // day of week (ie "Monday")
       allowNull: false,
     },
-    workout_id: {
+    category: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    workout_name: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    sets: {
       type: DataTypes.INTEGER,
-      references: {
-        model: 'workout',
-        key: 'id',
-      },
+      allowNull: true,
+    },
+    reps: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+    },
+    workout_notes: {
+      type: DataTypes.STRING,
+      allowNull: true,
     },
     user_id: {
       type: DataTypes.INTEGER,

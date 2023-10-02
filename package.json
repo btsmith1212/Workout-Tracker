@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "ajax": "^0.0.4",
     "bcrypt": "^5.1.1",
     "bulma": "^0.9.4",
     "chart.js": "^4.4.0",
