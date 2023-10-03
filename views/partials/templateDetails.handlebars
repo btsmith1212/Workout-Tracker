@@ -1,38 +1,38 @@
-<div class='column is-12-mobile is-3-tablet is-3-desktop'>
-  <div class='card has-background-success' id='{{id}}'>
-    <h2 class='has-text-centered mb-3'>{{day_of_week}}</h2>
-    <div class='card-content small-card has-text-light'>
+<div class="column is-12-mobile is-3-tablet is-3-desktop">
+  <div class="card has-background-success" id="{{id}}">
+    <h2 class="has-text-centered mb-3">{{day_of_week}}</h2>
+    <div class="card-content small-card has-text-light">
       <p>{{workout-category}}</p>
       <p>{{workout_name1}}</p>
       <p>Sets: {{sets1}}</p>
       <p>Reps: {{reps1}}</p>
     </div>
-    {{#if workout-name2}}
-      <div class='card-content small-card has-text-light'>
+    {{#if (check_length workout_name2)}}
+      <div class="card-content small-card has-text-light">
         <p>{{workout-category}}</p>
         <p>{{workout_name2}}</p>
         <p>Sets: {{sets2}}</p>
         <p>Reps: {{reps2}}</p>
       </div>
     {{/if}}
-    {{#if workout-name3}}
-      <div class='card-content small-card has-text-light'>
+    {{#if (check_length workout_name3)}}
+      <div class="card-content small-card has-text-light">
         <p>{{workout-category}}</p>
         <p>{{workout_name3}}</p>
         <p>Sets: {{sets3}}</p>
         <p>Reps: {{reps}}</p>
       </div>
     {{/if}}
-    {{#if workout-name4}}
-      <div class='card-content small-card has-text-light'>
+    {{#if (check_length workout_name4)}}
+      <div class="card-content small-card has-text-light">
         <p>{{workout-category}}</p>
         <p>{{workout_name4}}</p>
         <p>Sets: {{sets4}}</p>
         <p>Reps: {{reps4}}</p>
       </div>
     {{/if}}
-    {{#if workout-name5}}
-      <div class='card-content small-card has-text-light'>
+    {{#if (check_length workout_name5)}}
+      <div class="card-content small-card has-text-light">
         <p>{{workout-category}}</p>
         <p>{{workout_name5}}</p>
         <p>Sets: {{sets5}}</p>
