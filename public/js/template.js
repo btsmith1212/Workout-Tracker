@@ -1,7 +1,7 @@
-const templateFormHandler = async event => {
+const templateFormHandler = async (event) => {
   event.preventDefault();
-  const day_of_week = document.querySelector('#workout-day').value.trim();
-  const category = document.querySelector('#workout-category').value.trim();
+  const day_of_week = document.querySelector("#workout-day").value.trim();
+  const category = document.querySelector("#workout-category").value.trim();
   let workout_name1,
     sets1,
     reps1,
@@ -19,7 +19,7 @@ const templateFormHandler = async event => {
     reps5;
 
   for (let i = 1; i < 6; i++) {
-    if (document.querySelector(`#workout-name${i}`).value.trim() !== '') {
+    if (document.querySelector(`#workout-name${i}`).value.trim() !== "") {
       eval(
         `workout_name${i} = document.querySelector('#workout-name${i}').value.trim();`
       );
@@ -53,14 +53,14 @@ const templateFormHandler = async event => {
   };
 
   if (category && day_of_week) {
-    const response = await fetch('/api/templates', {
-      method: 'POST',
+    const response = await fetch("/api/templates", {
+      method: "POST",
       body: JSON.stringify(data),
-      headers: { 'Content-Type': 'application/json' },
+      headers: { "Content-Type": "application/json" },
     });
 
     if (response.ok) {
-      alert('Workout added to template.');
+      alert("Workout added to template.");
       document.location.reload();
     } else {
       alert(response.statusText);
@@ -69,5 +69,5 @@ const templateFormHandler = async event => {
 };
 
 document
-  .querySelector('.template-form')
-  .addEventListener('submit', templateFormHandler);
+  .querySelector(".template-form")
+  .addEventListener("submit", templateFormHandler);
